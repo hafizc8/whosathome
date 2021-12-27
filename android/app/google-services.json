@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "355296373591",
+    "project_id": "whosathome-2005b",
+    "storage_bucket": "whosathome-2005b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:355296373591:android:b979c94a084c5eeb686c12",
+        "android_client_info": {
+          "package_name": "com.example.whosathome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "355296373591-g20hnutc53492aksrfrdcjc7fg7k00uc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.whosathome",
+            "certificate_hash": "1e1a866454a7a9f316bdcf4c8b471bbce1e88094"
+          }
+        },
+        {
+          "client_id": "355296373591-4fckag6qah6sbr713vrop4fagannsltb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNtM_33uvusVtIkqsHKpnS2n-AjmKCAko"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "355296373591-4fckag6qah6sbr713vrop4fagannsltb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
