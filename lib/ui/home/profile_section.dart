@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:whosathome/controllers/my_app_controllers.dart';
+import 'package:whosathome/controllers/activity_controller.dart';
+import 'package:whosathome/controllers/my_app_controller.dart';
+import 'package:whosathome/controllers/my_family_controller.dart';
 
 class ProfileSection extends StatelessWidget {
   ProfileSection({ Key? key }) : super(key: key);
 
   final controller = Get.find<MyAppControllers>();
+  final familyC = Get.find<MyFamilyController>();
+  final activityC = Get.find<ActivityController>();
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +41,7 @@ class ProfileSection extends StatelessWidget {
                     ),
                     const SizedBox(height: 5),
                     const Text(
-                      "You just left 20 minute ago",
+                      "Online",
                       style: TextStyle(
                         fontSize: 12,
                       ),
@@ -62,7 +66,7 @@ class ProfileSection extends StatelessWidget {
               width: 100,
               height: 35,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () => activityC.markAsEvent(isHaveFamily: familyC.familyData.isNotEmpty, eventLabel: EventLabel.iGo),
                 child: const Text(
                   "I go",
                   style: TextStyle(
@@ -71,7 +75,8 @@ class ProfileSection extends StatelessWidget {
                 ),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
-                      const Color(0xFF818181)),
+                    const Color(0xFF818181),
+                  ),
                 ),
               ),
             ),
@@ -80,7 +85,7 @@ class ProfileSection extends StatelessWidget {
               width: 100,
               height: 35,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () => activityC.markAsEvent(isHaveFamily: familyC.familyData.isNotEmpty, eventLabel: EventLabel.imHome),
                 child: const Text(
                   "I'm home",
                   style: TextStyle(
@@ -95,7 +100,7 @@ class ProfileSection extends StatelessWidget {
               ),
             ),
           ],
-        )
+        ),
       ],
     );
   }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:whosathome/controllers/my_app_controllers.dart';
+import 'package:whosathome/controllers/my_app_controller.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   OnBoardingScreen({Key? key}) : super(key: key);
@@ -37,7 +37,7 @@ class OnBoardingScreen extends StatelessWidget {
               width: double.infinity,
               height: 55,
               child: ElevatedButton(
-                onPressed: () => controller.handleSignIn(),
+                onPressed: () => controller.signInGoogle(isSignIn: false),
                 child: const Text(
                   "Create new account",
                   style: TextStyle(
@@ -55,7 +55,7 @@ class OnBoardingScreen extends StatelessWidget {
               width: double.infinity,
               height: 55,
               child: ElevatedButton(
-                onPressed: () => controller.handleSignIn(),
+                onPressed: () => controller.signInGoogle(),
                 child: const Text(
                   "I have account",
                   style: TextStyle(

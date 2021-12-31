@@ -1,13 +1,14 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:whosathome/routes/app_pages.dart';
-import 'package:whosathome/ui/onboarding/onboarding.dart';
 import 'package:whosathome/ui/theme/theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  await GetStorage.init();
   runApp(const MyApp());
 }
 
@@ -21,7 +22,6 @@ class MyApp extends StatelessWidget {
       theme: Themes.light,
       darkTheme: Themes.dark,
       themeMode: ThemeMode.dark,
-      home: OnBoardingScreen(),
       initialRoute: Routes.initial,
       defaultTransition: Transition.fade,
       getPages: AppPages.pages,
